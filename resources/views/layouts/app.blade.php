@@ -92,7 +92,7 @@
 			</div>
 		</div>
 		<!-- End Topbar -->
-		{{-- <div class="middle-inner">
+		<div class="middle-inner">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-2 col-md-2 col-12">
@@ -177,7 +177,7 @@
 					</div>
 				</div>
 			</div>
-		</div> --}}
+		</div>
 
 	</header>
 	<!--/ End Header -->
