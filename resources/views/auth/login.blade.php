@@ -66,7 +66,7 @@
                         </div>
 
                         <a class="btn btn-link" href="{{ route('register') }}">
-                            {{ __('Register') }}
+                            {{ __('Register Now') }}
                         </a>
                     </form>
                 </div>
