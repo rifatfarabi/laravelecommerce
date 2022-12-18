@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,6 @@ Auth::routes();
 
 Route::get('admin/login', [LoginController::class,'showAdminLogin'])->name('admin.login');
 
+
+Route::get('admin/dashboard', [DashboardController::class,'adminDashboard'])->name('dashboard.admin');
+Route::get('customer/dashboard', [DashboardController::class,'customerDashboard'])->name('dashboard.customer');

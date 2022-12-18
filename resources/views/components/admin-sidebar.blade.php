@@ -15,8 +15,8 @@
                 {{ __('Dashboard') }}
             </a>
         </li>
-       
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }}">
+
+            {{-- <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-users c-sidebar-nav-icon">
 
@@ -24,7 +24,7 @@
                     {{ __('User Management') }}
                 </a>
                 <ul class="c-sidebar-nav-dropdown-items">
-                   
+
                         <li class="c-sidebar-nav-item">
                             <a href="{{ route("permissions.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/permissions") || request()->is("admin/permissions/*") ? "c-active" : "" }}">
                                 <i class="fa-fw fas fa-unlock-alt c-sidebar-nav-icon">
@@ -51,12 +51,12 @@
                                 {{ __('User') }}
                             </a>
                         </li>
-                   
+
                 </ul>
-            </li>
-   
+            </li> --}}
+
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
-  
+
                 <li class="c-sidebar-nav-item">
                     <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}" href="{{ route('profile.password.edit') }}">
                         <i class="fa-fw fas fa-key c-sidebar-nav-icon">
