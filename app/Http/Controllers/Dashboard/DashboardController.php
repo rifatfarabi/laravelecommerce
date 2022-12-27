@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
 class DashboardController extends Controller
 {
@@ -13,6 +15,7 @@ class DashboardController extends Controller
     }
 
     public function customerDashboard(){
+        abort_if(Auth::user()->role != "customer", Response::HTTP_FORBIDDEN,"Not Authorize");
         return view('dashboard.customer');
     }
 }
