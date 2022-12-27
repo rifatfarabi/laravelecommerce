@@ -27,5 +27,5 @@ Auth::routes();
 Route::get('admin/login', [LoginController::class,'showAdminLogin'])->name('admin.login');
 
 
-Route::get('admin/dashboard', [DashboardController::class,'adminDashboard'])->name('dashboard.admin');
-Route::get('customer/dashboard', [DashboardController::class,'customerDashboard'])->name('dashboard.customer');
+Route::get('admin/dashboard', [DashboardController::class,'adminDashboard'])->name('admin.dashboard');
+Route::get('customer/dashboard', [DashboardController::class,'customerDashboard'])->name('customer.dashboard');

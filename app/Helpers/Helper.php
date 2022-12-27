@@ -70,10 +70,10 @@ function getRole(){
 }
 
 function hasRole($role){
-    
+
     if(Auth::check()){
-        return Auth::user()->hasrole($role) ? true : false;
-    //    return Auth::user()->roles()->where('title', $role)->first() ? true : false;
+        // return Auth::user()->hasrole($role) ? true : false;
+       return Auth::user()->roles()->where('title', $role)->first() ? true : false;
     }
 
     return false;
