@@ -15,7 +15,7 @@ class DashboardController extends Controller
     }
 
     public function customerDashboard(){
-        abort_if(Auth::user()->role != "customer", Response::HTTP_FORBIDDEN,"Not Authorize");
+        abort_if(Auth::user()->role != "customer", Response::HTTP_FORBIDDEN, "Not Authorized");
         return view('dashboard.customer');
     }
 }

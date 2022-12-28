@@ -29,7 +29,8 @@ class UserTableSeeder extends Seeder
                 'email' => 'customer@customer.com',
                 'password' => \Hash::make('password')
             ]
-            ];
-            User::insert($users);
+        ];
+        
+        User::insert($users);
     }
 }
